@@ -24,6 +24,12 @@ public class RetailerAPI {
 	@Autowired
 	private RetailersService retailersService;
 	
+	@GetMapping
+	public String getMessage() {
+		return "Hello world";
+	}
+	
+	
 	@PostMapping
 	public ResponseEntity<Object> createRetailer(@RequestBody RetDetails retDetails) throws Exception{
 		try {
